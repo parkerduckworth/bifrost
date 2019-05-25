@@ -5,7 +5,7 @@ use crate::core::working_dir::WorkingDir;
 
 #[derive(Debug)]
 pub struct WorkSpace {
-    config: Config,
+    pub config: Config,
     registered_paths: Vec<PathBuf>,
     working_dirs: Vec<WorkingDir>,
 }

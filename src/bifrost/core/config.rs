@@ -10,8 +10,8 @@ use failure;
 
 #[derive(Debug)]
 pub struct Config {
-    home_path: PathBuf,
-    cwd: PathBuf,
+    pub home_path: PathBuf,
+    pub cwd: PathBuf,
     manifest: Option<BifrostManifest>,
     opts: Option<CommandOptions>,
     cli_args: Option<Vec<String>>,

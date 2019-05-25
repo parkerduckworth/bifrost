@@ -15,10 +15,13 @@ fn main() -> BifrostResult<()> {
     match app.subcommand() {
         ("init", Some(init_matches)) => {
             commands::init::exec()?;
-        }
+        },
+        ("run", Some(run_matches)) => {
+            commands::run::exec(&workspace)?;
+        },
         _ => {
             println!("{}", bifrost::util::template::EXPLICIT_LONG_HELP);
-        }
+        },
     }
 
     Ok(())
